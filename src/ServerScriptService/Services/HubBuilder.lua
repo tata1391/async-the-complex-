@@ -378,10 +378,10 @@ function HubBuilder:SetPortalState(portalId, state, session)
 		color = Color3.fromRGB(165, 175, 130)
 		indicatorColor = Color3.fromRGB(225, 185, 65)
 		status = string.format("WAITING %d/%d", session and #session.Players or 0, (session and session.Capacity or Config.Game.MaxPlayersPerSession))
-	elseif state == "ACTIVE" then
+	elseif state == "STARTING" or state == "TELEPORTING" or state == "ACTIVE" then
 		color = V.PortalActive
 		indicatorColor = Color3.fromRGB(90, 170, 255)
-		status = "PORTAL ACTIVE"
+		status = state == "ACTIVE" and "PORTAL ACTIVE" or state
 	elseif state == "ALERT" then
 		color = Color3.fromRGB(255, 100, 80)
 		indicatorColor = V.EmergencyRed
