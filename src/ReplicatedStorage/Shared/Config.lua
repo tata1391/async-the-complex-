@@ -31,8 +31,8 @@ Config.Portals = {
 	{Id = "P02", DisplayName = "THRESHOLD 02", DefaultLevel = "LEVEL_1", Accent = Color3.fromRGB(180, 150, 100)},
 	{Id = "P03", DisplayName = "THRESHOLD 03", DefaultLevel = "LEVEL_2", Accent = Color3.fromRGB(110, 150, 180)},
 	{Id = "P04", DisplayName = "THRESHOLD 04", DefaultLevel = "LEVEL_3", Accent = Color3.fromRGB(190, 120, 90)},
-	{Id = "P05", DisplayName = "THRESHOLD 05", DefaultLevel = "LEVEL_5", Accent = Color3.fromRGB(180, 180, 150)},
-	{Id = "P06", DisplayName = "THRESHOLD 06", DefaultLevel = "LEVEL_6", Accent = Color3.fromRGB(120, 130, 160)},
+	{Id = "P05", DisplayName = "THRESHOLD 05", DefaultLevel = "LEVEL_4", Accent = Color3.fromRGB(180, 180, 150)},
+	{Id = "P06", DisplayName = "THRESHOLD 06", DefaultLevel = "LEVEL_5", Accent = Color3.fromRGB(120, 130, 160)},
 }
 
 Config.Levels = {
@@ -40,6 +40,7 @@ Config.Levels = {
 	LEVEL_1 = {Id = "LEVEL_1", Name = "HABITABLE ZONE", Status = "LOCKED", Unlocked = false},
 	LEVEL_2 = {Id = "LEVEL_2", Name = "UTILITY HALLS", Status = "LOCKED", Unlocked = false},
 	LEVEL_3 = {Id = "LEVEL_3", Name = "ELECTRICAL STATION", Status = "LOCKED", Unlocked = false},
+	LEVEL_4 = {Id = "LEVEL_4", Name = "RESEARCH WARD", Status = "LOCKED", Unlocked = false},
 	LEVEL_5 = {Id = "LEVEL_5", Name = "TERROR HOTEL", Status = "LOCKED", Unlocked = false},
 	LEVEL_6 = {Id = "LEVEL_6", Name = "LIGHTS OUT", Status = "LOCKED", Unlocked = false},
 }
