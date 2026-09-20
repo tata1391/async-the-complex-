@@ -76,7 +76,7 @@ button(panel,"LEAVE / RETURN",UDim2.fromOffset(225,436),UDim2.fromOffset(197,42)
 local start=button(panel,"START AS HOST",UDim2.fromOffset(18,488),UDim2.fromOffset(250,42),function() request("Start") end)
 button(panel,"SHOW CODE",UDim2.fromOffset(280,488),UDim2.fromOffset(142,42),function() request("Code") end)
 local buttons={}
-local order={"LEVEL_0","LEVEL_1","LEVEL_2","LEVEL_3","LEVEL_5","LEVEL_6"}
+local order={"LEVEL_0","LEVEL_1","LEVEL_2","LEVEL_3","LEVEL_4","LEVEL_5","LEVEL_6"}
 for i,id in ipairs(order) do
 	local level=Config.Levels[id]
 	buttons[id]=button(levels,id.."  "..level.Name..(level.Unlocked and "" or " [LOCKED]"),UDim2.fromOffset(0,(i-1)*34),UDim2.fromOffset(394,30),function()
