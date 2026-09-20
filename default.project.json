@@ -1,0 +1,27 @@
+{
+  "name": "AsyncTheComplex",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "Shared": {
+        "$path": "src/ReplicatedStorage/Shared"
+      }
+    },
+    "ServerScriptService": {
+      "Services": {
+        "$path": "src/ServerScriptService/Services"
+      },
+      "HubServer.server.lua": {
+        "$path": "src/ServerScriptService/HubServer.server.lua"
+      }
+    },
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "$path": "src/StarterPlayer/StarterPlayerScripts"
+      }
+    },
+    "StarterGui": {
+      "$path": "src/StarterGui"
+    }
+  }
+}
