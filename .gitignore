@@ -1,0 +1,6 @@
+*.rbxl
+*.rbxlx
+*.rbxm
+node_modules/
+.luarocks/
+.rojo/
