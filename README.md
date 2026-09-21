@@ -5,7 +5,9 @@ A Rojo-compatible, server-authoritative Roblox hub prototype for a co-op horror 
 ## Included
 
 - Six industrial portal chambers: armored rectangular threshold, blue tanks, conduit, cable runs, rails, safety line, indicator and status label.
-- Central observation corridor with chamber openings, security arrival, equipment lockers and control-gallery stair.
+- Central observation corridor with chamber openings, security arrival, equipment lockers, archive/equipment signage and control-gallery stair.
+- Sealed rear maintenance galleries behind the six chambers, reserved for future archive and secret gates.
+- Controlled fluorescent flicker loop for a living facility feel.
 - Server-owned session creation for 1–4 players.
 - Public, Friends-only and Private sessions with host capacity and private code.
 - Level 0 unlocked; later level records are present but locked.
