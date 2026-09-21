@@ -8,6 +8,7 @@ for _, name in pairs(Net.Events) do remotes[name]=remoteFolder:WaitForChild(name
 local hub = require(Services.HubBuilder).new():Build()
 local sessions = require(Services.SessionService).new(remotes,hub)
 require(Services.PortalService).new(hub,sessions,remotes)
+require(Services.HubEffects).new(hub):Start()
 local ready = {}
 local connected = {}
 local function onPlayer(player)
