@@ -13,6 +13,7 @@
 - Public: another test client can join the same chamber.
 - Friends/Private: the server rechecks the policy; private uses the displayed eight-character code.
 - Leave or respawn clears membership and returns the character to Security Arrival.
+- Rear maintenance galleries are intentionally sealed in this hub slice; their hatches are tagged `SecretContentGate` for the later Archive/secret-content pass.
 - Set `Config.Teleport.Enabled = true` only in a published experience and provide a valid destination PlaceId.
 
 ## Troubleshooting
