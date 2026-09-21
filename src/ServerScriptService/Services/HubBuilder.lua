@@ -189,6 +189,25 @@ function HubBuilder:Build()
 		end
 	end
 	createPart(geometry, "NorthWall", Vector3.new(72, 20, 1), CFrame.new(0, 10, 56), V.Brick, Enum.Material.Brick)
+	-- Rear maintenance galleries: sealed during the hub slice, reserved for archive and secret-content gates.
+	local service = Instance.new("Model")
+	service.Name = "RearMaintenanceGalleries"
+	service.Parent = root
+	for _, side in ipairs({-1, 1}) do
+		local x = side * 41
+		createPart(service, "ServiceFloor", Vector3.new(10, 0.3, hub.CorridorLength), CFrame.new(x, -0.1, 0), V.Floor, Enum.Material.Concrete)
+		createPart(service, "ServiceCeiling", Vector3.new(10, 0.35, hub.CorridorLength), CFrame.new(x, 12, 0), V.Metal, Enum.Material.Metal)
+		createPart(service, "ServiceOuterWall", Vector3.new(0.8, 12, hub.CorridorLength), CFrame.new(side*46, 6, 0), V.Brick, Enum.Material.Brick)
+		createPart(service, "ServiceInnerWall", Vector3.new(0.8, 12, hub.CorridorLength), CFrame.new(side*36, 6, 0), V.Panel, Enum.Material.Metal)
+		for _, z in ipairs({-46, -8, 30}) do
+			createPart(service, "MaintenanceLight", Vector3.new(3, 0.12, 0.5), CFrame.new(x, 11.7, z), V.Panel, Enum.Material.Metal)
+		end
+		for _, z in ipairs({-56, 56}) do
+			createPart(service, "ServiceEndWall", Vector3.new(10, 12, 0.8), CFrame.new(x, 6, z), V.Brick, Enum.Material.Brick)
+		end
+		local hatch = createPart(service, "MaintenanceHatch", Vector3.new(0.2, 4, 3), CFrame.new(side*36.45, 4.5, -52), V.Metal, Enum.Material.Metal, 0, true)
+		hatch:SetAttribute("SecretContentGate", true)
+	end
 	-- Stair to the accessible control gallery; 20 steps at 0.55 studs.
 	for step = 1, 20 do
 		createPart(geometry, "ControlStair", Vector3.new(5, step*0.55, 1), CFrame.new(0, step*0.275, 30-step), V.Metal, Enum.Material.DiamondPlate)
@@ -345,6 +364,10 @@ function HubBuilder:Build()
 		end
 	end
 	createCeilingLight(entrance, Vector3.new(0,13.7,-70))
+	local archiveSign = createPart(entrance, "ArchiveSign", Vector3.new(5.5, 0.25, 0.12), CFrame.new(7.8, 8.5, -72), Color3.fromRGB(39, 52, 46), Enum.Material.Metal, 0, false)
+	createLabel(archiveSign, "ARCHIVE / LOGS", Color3.fromRGB(175, 210, 185))
+	local equipmentSign = createPart(entrance, "EquipmentSign", Vector3.new(5.5, 0.25, 0.12), CFrame.new(-7.8, 8.5, -72), Color3.fromRGB(39, 52, 46), Enum.Material.Metal, 0, false)
+	createLabel(equipmentSign, "EQUIPMENT / ISSUE", Color3.fromRGB(175, 210, 185))
 
 	local spawn = Instance.new("SpawnLocation")
 	spawn.Name = "HubSpawn"
